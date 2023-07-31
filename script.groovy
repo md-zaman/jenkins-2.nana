@@ -9,6 +9,7 @@ def buildImage() {
         sh 'docker build -t zamanmd/demo-app:jma-2.0 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
         sh 'docker push zamanmd/demo-app:jma-2.0'
+    }
 }
 
 def deployApp() {
